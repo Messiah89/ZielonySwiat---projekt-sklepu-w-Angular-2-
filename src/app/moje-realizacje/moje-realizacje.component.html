@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<div class="card">
+  <div class="card-header">
+    <h4>{{title}}</h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-2">Wyszukaj przez: </div>
+      <div class="col-md-4"> <input type="text" [(ngModel)]="filtrListy" /></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class='col-md-6'>
+      <h4>Wyszukano przez: {{filtrListy}} </h4>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table" *ngIf='realizacje && realizacje.length'>
+      <thead class="thead-dark">
+        <tr style="text-align: center">
+          <th style="width: 15%;">Zdjęcie</th>
+          <th style="width: 15%;">Wysokość</th>
+          <th style="width: 15%;">Średnica</th>
+          <th style="width: 15%;">Sugerowana cena</th>
+          <th style="width: 15%;">Data dodania</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let realizacje of realizacje' style="text-align: center">
+          <td>
+            <img [src]='realizacje.Zdjecie' style="width: 35%; margin: 2px;">
+          </td>
+          <td>{{realizacje.Wysokosc}}</td>
+          <td>{{realizacje.Srednica}}</td>
+          <td>{{realizacje.SugerowanaCena}}</td>
+          <td>{{realizacje.DataDodania}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<div>
+  <button type="button" class="btn btn-link" style="text-align: left" style="border: none;">
+    <img
+      src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/p960x960/77049212_1694115310713516_2394038942866341888_o.png?_nc_cat=102&_nc_ohc=0vRn3JQLY0YAX_kTd_V&_nc_ht=scontent-waw1-1.xx&oh=64c321a37085200d0970eec9f20caac2&oe=5ED3CED6"
+      width="100" alt="ZielonySwiat logo">
+  </button>
+  <nav class="btn-group btn-group-xs" style="align-content: center;">
+    <button type="button" class="btn btn-success">O mnie</button>
+    <button type="button" class="btn btn-success">Moje realizacje</button>
+    <button type="button" class="btn btn-success">Złóż zamówienie</button>
+    <button type="button" class="btn btn-success">Jak dbać o słoik</button>
+    <button type="button" class="btn btn-success">Kontakt</button>
+  </nav>
+  <br>
+  <div style="text-align: center">
+    <div>
+      <h1>
+        Witamy w {{ title }}!
+      </h1>
+    </div>
+  </div>
+  <app-moje-realizacje></app-moje-realizacje>
+
+  <router-outlet></router-outlet>
+  <footer>Wszystkie prawa zastrzeżone!</footer>
+</div>
+
+</html>
